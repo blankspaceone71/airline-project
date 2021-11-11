@@ -13,3 +13,5 @@ scipy==1.7.2
 sklearn
 threadpoolctl==3.0.0
 Werkzeug==2.0.2
+gunicorn
+
