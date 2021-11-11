@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>airline fare prediction</title>
+
+</head>
+
+<body>
+    <div class="container text-center">
+    <form action="/math" method="post">
+        <label for="air_li">Choose airline:</label>
+        <div>
+            <select name="air_li" id="air">
+                <option value="Air Asia">Air Asia</option>
+                <option value="Air India">Air India</option>
+                <option value="GoAir">GoAir</option>
+                <option value="IndiGo">IndiGo</option>
+                <option value="Jet Airways">Jet Airways</option>
+                <option value="Jet Airways Business">Jet Airways Business</option>
+                <option value="Multiple carriers">Multiple carriers</option>
+                <option value="Multiple carriers Premium economy">Multiple carriers Premium economy</option>
+                <option value="SpiceJet">SpiceJet</option>
+                <option value="Vistara">Vistara</option>
+                <option value="Vistara Premium economy">Vistara Premium economy</option>
+                <option value="other">other</option>
+
+            </select>
+        </div> <br>
+
+        <div>
+            <label for="source">boarding </label>
+            <select id="source" name="source">
+                <option value="Banglore">Banglore</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Mumbai">Mumbai</option>
+            </select>
+        </div><br>
+
+
+        <div>
+            <label for="destination">destination </label>
+            <select id="destination" name="destination">
+                <option value="Kolkata">Kolkata</option>
+                <option value="Banglore">Banglore</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Chennai">Cochi</option>
+                <option value="Hyderabad">Hyderabad</option>
+
+            </select>
+        </div><br>
+
+        <div>
+            <label for="aditional_info">aditional_info </label>
+            <select id="aditional_info" name="add_inf">
+                <option value="other">other</option>
+                <option value="meal_not_included">meal_not_included</option>
+                <option value="Business class">Business class</option>
+                <option value="Red-eye-flight">Red-eye-flight</option>
+
+            </select>
+        </div> <br>
+        <div>
+            <label for="t_s">Total stops </label>
+            <input type="number" name="t_s" min="0" max="4" placeholder="total stops">
+        </div><br>
+        <div>
+            <label for="day_j">Day of journey </label>
+            <input type="number" name="day_j" min="1" max="31" placeholder="day of journey">
+        </div><br>
+        <div>
+            <label for="month_j">Month of journey </label>
+            <input type="number" name="month_j" min="1" max="12" placeholder="month of journey">
+        </div><br>
+        <div>
+            <label for="dep_hr">departure hour</label>
+            <input type="number" name="dep_hr" min='0' max="23" placeholder="dep_hr">
+        </div><br>
+        <div>
+            <label for="dep_min">departure min</label>
+            <input type="number" name="dep_min" min="0" max="60" placeholder="dep_min">
+        </div><br>
+
+        <button class='btn btn-success'>predict </button>
+
+
+
+
+
+    </form>
+
+<div class="row">
+{% if prediction %}
+<h2>{{prediction}}</h2>
+{% endif %}
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
