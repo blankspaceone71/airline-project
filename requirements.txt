@@ -14,5 +14,4 @@ sklearn
 threadpoolctl==3.0.0
 Werkzeug==2.0.2
 gunicorn
-python-3.9.8
 
