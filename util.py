@@ -85,8 +85,9 @@ def load_artifacts():
     with open('./artifacts/airline_model.pickle', 'rb') as g:
         __model = pickle.load(g)
 
-    return __data_columns, __model
 
+def get_data_columns():
+    return __data_columns
 
 if __name__ == '__main__':
     load_artifacts()
