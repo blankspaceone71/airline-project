@@ -3,7 +3,7 @@ import numpy as np
 import pickle
 import json
 
-__data_columns=0
+__data_columns=None
 __model=None
 
 def estimated_price(airline, source, destination, additional_info, total_stops, day_of_journey,
