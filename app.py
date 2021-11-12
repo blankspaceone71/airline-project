@@ -26,10 +26,10 @@ def predict():
         result = util.estimated_price(airline, source, destination, additional_info, total_stops, day_of_journey,
                                       month_of_journey, dep_hr, dep_min)
 
-    return render_template('index.html', prediction=result)
+        result1 = 'Estimated Price ={}'.format(result)
+
+    return render_template('index.html', prediction=result1)
 
 
 if __name__ == "__main__":
     app.run()
-    
-
