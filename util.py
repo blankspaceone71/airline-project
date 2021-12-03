@@ -2,9 +2,6 @@ import numpy as np
 import pickle
 import json
 
-# __data_columns = ["air asia", "air india", "goair", "indigo", "jet airways", "jet airways business", "multiple carriers", "multiple carriers premium economy", "spicejet", "vistara", "vistara premium economy", "source", "destination", "additional_info", "total_stops", "day_of_journey", "month_of_journey", "dep_hr", "dep_min"]
-
-
 with open('./artifacts/column.json', 'r') as f:
     __data_columns = json.load(f)['data_columns']
 
